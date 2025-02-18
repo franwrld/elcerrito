@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="<?php echo URL;?>public_html/css/menuprincipal.css">
     <!-- Icono en el navegador -->
     <link rel="shortcut icon" href="<?php echo URL;?>public_html/images/logo200px.jpeg" type="image/x-icon">
-    <title>El Cerrito Main Menu</title>
+    <title>El Cerrito</title>
 </head>
 <body>
     <!-- Contenedor Principal -->
