@@ -1,0 +1,797 @@
+body, html {
+    margin: 0;
+}
+
+/* * {
+    border: red solid 1px;
+} */
+
+.numycaj {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.totalcambiotxt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.totalP {
+    color: #00ff5c;
+    font-size: 20px;
+}
+.cambioP {
+    color: white;
+    margin-left: 15px;
+    font-size: 20px;
+}
+.nuserH {
+    color: #ffffff;
+    font-size: 20px;
+    margin-left: 7px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nuser {
+    color: white;
+    margin-left: 7px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* DIV Principal contenedor todo */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}
+/* HEADER */
+.header {
+    display: flex;
+    flex-direction: column;
+    background: black;
+}
+.headercont {
+    display: flex;
+    flex-direction: row;
+    background: black;
+    margin: 11px 11px;
+    justify-content: center;
+}
+/* Header Logo, Titulo y icono */
+.head1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.imglogo {
+    height: 80px;
+    width: 171px;
+    margin: 0 5px;
+}
+.iconmenu {
+    filter: invert(100%);
+    height: 32px;
+    margin: 0 5px;
+}
+.icontitulocuenta {
+    filter: invert(100%);
+    margin: 0 5px;
+}
+.iconcuenta {
+    margin: 0 5px;
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 36px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 36px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+/* Header opciones */
+.head2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.btnheader {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 5px;
+    border: 3px solid rgb(255 127 0);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btnheader::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 127 0);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.btnheader:hover {
+    color: black;
+}
+
+.btnheader:hover::before {
+    transform: translateX(0);
+}
+/* Boton Cerar Sesion */
+
+.noselect {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #000000e0;
+}
+
+.noselect,
+.noselect span {
+    transition: 200ms;
+}
+
+.noselect .text {
+    transform: translateX(35px);
+    color: white;
+    margin-left: -22px;
+    font-weight: bold;
+}
+
+.noselect .icon {
+    position: absolute;
+    border-left: 1px solid #ffffff;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noselect img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.noselect:hover {
+    background: #ff3636;
+}
+
+.noselect:hover .text {
+    color: transparent;
+}
+
+.noselect:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.noselect:focus {
+    outline: none;
+}
+
+.noselect:active .icon img {
+    transform: scale(0.8);
+}
+/* backbtn */
+.btnback {
+    display: block;
+    position: relative;
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+
+.btnback:before,
+.btnback:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 7px;
+}
+
+.btnback:before {
+    border: 4px solid #F0EEEF;
+    transition: opacity .4s cubic-bezier(.77, 0, .175, 1) 80ms, transform .5s cubic-bezier(.455, .03, .515, .955) 80ms;
+}
+
+.btnback:after {
+    border: 4px solid #f67609;
+    transform: scale(1.3);
+    transition: opacity .4s cubic-bezier(.165, .84, .44, 1), transform .5s cubic-bezier(.25, .46, .45, .94);
+    opacity: 0;
+}
+
+.btnback:hover:before,
+.btnback:focus:before {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity .4s cubic-bezier(.165, .84, .44, 1), transform .5s cubic-bezier(.25, .46, .45, .94);
+}
+
+.btnback:hover:after,
+.btnback:focus:after {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity .4s cubic-bezier(.77, 0, .175, 1) 80ms, transform .5s cubic-bezier(.455, .03, .515, .955) 80ms;
+}
+
+.btnback-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btnback-elem {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin: 17px 18px 0 18px;
+    transform: rotate(180deg);
+    fill: #F0EEEF;
+}
+
+.btnback:hover .btnback-box,
+.btnback:focus .btnback-box {
+    transition: .4s;
+    transform: translateX(-56px);
+}
+
+.iconbtn {
+    filter: invert(100%);
+}
+/* OPCIONES */
+.opcionesCuenta {
+    display: flex;
+    flex-direction: column;
+    background: #0000007d;
+    justify-content: center;
+}
+.opcionescont {
+    display: flex;
+    flex-direction: row;
+    margin: 11px 11px;
+    justify-content: space-around;
+}
+
+/*Opciones MESAS */
+.tituloCuentaNueva {
+    display: flex;
+    flex-direction: column;
+    background: black;
+}
+.h1cuentanueva {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 36px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.book {
+    position: relative;
+    border-radius: 10px;
+    width: 220px;
+    height: 100px;
+    background-color: whitesmoke;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    -webkit-transform: preserve-3d;
+    -ms-transform: preserve-3d;
+    transform: preserve-3d;
+    -webkit-perspective: 2000px;
+    perspective: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    color: #000;
+  }
+
+  .book:hover {
+    cursor: pointer;
+  }
+  
+  .cover {
+    top: 0;
+    position: absolute;
+    background-color: rgb(255 127 0);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform-origin: 0;
+    -ms-transform-origin: 0;
+    transform-origin: 0;
+    -webkit-box-shadow: 1px 1px 12px #000;
+    box-shadow: 1px 1px 12px #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  .book:hover .cover {
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: rotatey(-80deg);
+    -ms-transform: rotatey(-80deg);
+    transform: rotatey(-80deg);
+  }
+  
+  p {
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+  }
+
+
+/* Tabla */
+.tabla {
+    display: flex;
+    flex-direction: column;
+    background: #0c0c0ce0;
+}
+/* _________________________________________________________ */
+/* Realizar Ventas Cuenta Individual y Mesas */
+
+.cuentas {
+    display: flex;
+    flex-direction: row;
+    background: #0000007d;
+    justify-content: space-around;
+}
+
+.menuAdd {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.menuTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.menuCategoria {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.cateButtoms{
+    display: flex;
+    margin: 6px 25px;
+    background-color: rgb(255 127 0);
+    color: #ffffff;
+    padding: 0.5rem 1.4rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    border-radius: 0.5rem;
+    gap: 0.75rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    transition: .6s ease;
+  }
+  
+  
+  .cateButtoms:hover {
+    box-shadow: none;
+    cursor: pointer;
+  }
+  
+
+.h1menucate {
+    color: white;
+    font-size: 22px;
+}
+
+.menuProductos {
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 11.875em;
+    height: 16.5em;
+    box-shadow: 0px 1px 13px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 120ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000000;
+    padding: 0.5em;
+    padding-bottom: 3.4em;
+  }
+  
+  .card::after {
+    content: "Agregar";
+    padding-top: 1.25em;
+    padding-left: 1.25em;
+    position: absolute;
+    left: 0;
+    bottom: -60px;
+    background: #02bd44;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+    height: 2.5em;
+    width: 90%;
+    transition: all 80ms;
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0;
+  }
+  
+  .card .title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0.625em;
+    bottom: 1.875em;
+    font-weight: 400;
+    color: #ffffff;
+  }
+  
+  .card .price {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9em;
+    position: absolute;
+    left: 0.625em;
+    bottom: 0.625em;
+    color: #ffffff;
+  }
+  
+  .card:hover::after {
+    bottom: 0;
+    opacity: 1;
+  }
+  
+  .card:active {
+    transform: scale(0.98);
+  }
+  
+  .card:active::after {
+    content: "Added !";
+    height: 3.125em;
+  }
+  
+  .image {
+    background: rgb(241, 241, 241);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+  }
+
+  .IMGMenu {
+    width: 100%;
+    height: 100%;
+  }
+ /* ___________________________________________________ *
+  /* TABLA MENU CUENTAS */
+
+.tablacuenta {
+    display: flex;
+    flex-direction: column;
+    background: #464646a3;
+    width: 50%;
+    backdrop-filter: blur(10px);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.h1T {
+    color: #ffffff;
+    font-size: 30px;
+}
+.h1Menu {
+    color: #ffffff;
+    font-size: 30px;
+}
+.tablamenutitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.tablaContenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 45px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 2px solid #0000002e;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #ff7f00;
+}
+
+.quitar-btn {
+    background-color: #ff5555;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.tablaInput {
+    background: #000;
+    margin: 7px 0px;
+    margin-left: 7px;
+    color: white;
+    width: 140px;
+    height: 33px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.tablaButtom {
+    padding: 15px 25px;
+    margin-left: 7px;
+    border: unset;
+    border-radius: 15px;
+    width: 161px;
+    color: #e8e8e8;
+    z-index: 1;
+    background: #212121;
+    position: relative;
+    font-weight: 1000;
+    font-size: 15px;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+    transition: all 250ms;
+    overflow: hidden;
+  }
+  
+  .tablaButtom::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 15px;
+    background-color: #e8e8e8;
+    z-index: -1;
+    -webkit-box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    box-shadow: 4px 8px 19px -3px rgba(255, 255, 255, 0.27);
+    transition: all 250ms
+  }
+  
+  .tablaButtom:hover {
+    color: #212121;
+  }
+  
+  .tablaButtom:hover::before {
+    width: 100%;
+  }
+
+/* Guardar BTN */
+.tablaButtomSave {
+    display: flex;
+    align-items: center;
+    background: #00000047;
+    color: #00ff5c;
+    font-family: inherit;
+    padding: 0.6em 1.3em;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid black;
+    border-radius: 0.4em;
+    box-shadow: 0.1em 0.1em;
+  }
+  
+  .tablaButtomSave:hover {
+    transform: translate(-0.05em, -0.05em);
+    box-shadow: 0.15em 0.15em;
+    cursor: pointer;
+    color: #000;
+    background: #00ff5c;
+  }
+
+  .tablaButtomSave:hover img {
+    filter: invert(0%);
+  }
+  
+  .tablaButtomSave:active {
+    transform: translate(0.05em, 0.05em);
+    box-shadow: 0.05em 0.05em;
+  }
+/*Resto botones */
+.limpiarbtn {
+    cursor: pointer;
+    --c: rgb(255 127 0);
+    padding: 12px 28px;
+    margin: 1em;
+    position: relative;
+    min-width: 12em;
+    background: transparent;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--c);
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    border: 2px solid var(--c);
+    border-radius: 8px;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  .limpiarbtn span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+  }
+  
+  .limpiarbtn:hover {
+    color: black;
+  }
+  
+  .limpiarbtn:hover span {
+    transform: translateY(0) scale(2);
+  }
+  
+  .limpiarbtn span:nth-child(1) {
+    --n: 1;
+  }
+  
+  .limpiarbtn span:nth-child(2) {
+    --n: 2;
+  }
+  
+  .limpiarbtn span:nth-child(3) {
+    --n: 3;
+  }
+  
+  .limpiarbtn span:nth-child(4) {
+    --n: 4;
+  }
+
+.tablaBotones {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 17px;
+}
+
+.MenuMensaje {
+    display: flex;
+    flex-direction: column;
+}
+
+.nameClient {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.txtlabel {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.txtlabelCambio {
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    margin-left: 7px;
+}
+
+.inputClient {
+    background: #000;
+    margin-left: 7px;
+    color: white;
+    width: 35%;
+    height: 33px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+.swal2-popup {
+    grid-column: 2;
+    grid-row: 2;
+    place-self: center center;
+    color: rgb(0, 0, 0);
+    background: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+.swal2-confirm.swal2-styled {
+    border: 0;
+    font-family: 'Roboto', sans-serif;
+    border-radius: .25em;
+    background: initial;
+    background-color: #ff7600;
+    color: #fff;
+    font-size: 1em;
+}
+
+.descam {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+}

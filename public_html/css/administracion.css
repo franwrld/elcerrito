@@ -1,0 +1,263 @@
+body,html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/*
+* {
+    border: red solid 1px;
+}
+*/
+/* DIV Principal todo */
+.menupp {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Div del titulo text Bienvenidos */
+.imglogo {
+    height: 80px;
+    width: 171px;
+}
+.titulomenu {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #000000;
+    align-items: center;
+    padding: 12px;
+}
+
+/* Barra naranja loader */
+.loader {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #f67609, transparent);
+    overflow: hidden;
+}
+
+.loader::after {
+    content: '';
+    position: absolute;
+    translate: -200px 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #212121, transparent);
+    animation: slide 1s infinite;
+}
+
+@keyframes slide {
+    100% {
+        translate: 300px 0;
+    }
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 23px;
+}
+/* Div de las opciones */
+.opcionesmenu {
+    display: flex;
+    flex-direction: column;
+    background: #0c0c0ce0;
+}
+/* Opciones */
+.iconmenu {
+    filter: invert(100%);
+    height: 32px;
+}
+.btn1 {
+    background: #000000ab;
+    display: flex;
+    flex-direction: row;
+    margin: 7px 26px;
+    justify-content: center;
+    align-items: center;
+}
+/* Botones Opciones */
+.fancy {
+    background-color: white;
+    border: 2px solid #000;
+    border-radius: 0;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    margin: 0;
+    outline: none;
+    overflow: visible;
+    padding: 1.25em 2em;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    text-transform: none;
+    transition: all 0.3s ease-in-out;
+    user-select: none;
+    font-size: 13px;
+}
+
+.fancy::before {
+    content: " ";
+    width: 1.5625rem;
+    height: 2px;
+    background: black;
+    top: 50%;
+    left: 1.5em;
+    position: absolute;
+    transform: translateY(-50%);
+    transform-origin: center;
+    transition: 0.3s linear, width 0.3s linear;
+}
+
+.fancy .text {
+    font-size: 1.125em;
+    line-height: 1.33333em;
+    padding-left: 2em;
+    display: block;
+    text-align: left;
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+}
+
+.fancy .top-key {
+    height: 2px;
+    width: 1.5625rem;
+    top: -2px;
+    left: 0.625rem;
+    position: absolute;
+    background: #f67609;
+    transition: width 0.5s ease-out, left 0.3s ease-out;
+}
+
+.fancy .bottom-key-1 {
+    height: 2px;
+    width: 1.5625rem;
+    right: 1.875rem;
+    bottom: -2px;
+    position: absolute;
+    background: #f67609;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy .bottom-key-2 {
+    height: 2px;
+    width: 0.625rem;
+    right: 0.625rem;
+    bottom: -2px;
+    position: absolute;
+    background: #f67609;
+    transition: width 0.5s ease-out, right 0.3s ease-out;
+}
+
+.fancy:hover {
+    color: white;
+    background: black;
+}
+
+.fancy:hover::before {
+    width: 0.9375rem;
+    background: white;
+}
+
+.fancy:hover .text {
+    color: #f67609;
+    padding-left: 1.5em;
+}
+
+.fancy:hover .top-key {
+    left: -2px;
+    width: 0px;
+}
+
+.fancy:hover .bottom-key-1,
+.fancy:hover .bottom-key-2 {
+    right: 0;
+    width: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Boton cerrar sesion */
+.botoncerrar {
+    display: flex;
+    justify-content: center;
+    background: #0c0c0ce0;
+    padding: 22px;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #353535e0;
+}
+
+button,
+button span {
+    transition: 200ms;
+}
+
+button .text {
+    transform: translateX(35px);
+    color: white;
+    margin-left: -22px;
+    font-weight: bold;
+}
+
+button .icon {
+    position: absolute;
+    border-left: 1px solid #ffffff;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+button:hover {
+    background: #ff3636;
+}
+
+button:hover .text {
+    color: transparent;
+}
+
+button:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active .icon img {
+    transform: scale(0.8);
+}

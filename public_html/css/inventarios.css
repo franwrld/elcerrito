@@ -1,0 +1,601 @@
+html body {
+    height: 100%;
+}
+.row {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0%;
+}  
+/* CSS Mitad1 pantalla 20% */
+  .mitad1 {
+    margin: 0px;
+    padding: 0;
+    position: absolute;
+    margin-top: 0%;
+    width: 15%;
+    column-fill: auto;
+    height: 100%; 
+  }
+/* DIV Principal todo */
+.menupp {
+    display: flex;
+    flex-direction: column;
+
+}
+/* Div del titulo text Bienvenidos */
+.titulomenu {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #000000;
+}
+/* Barra naranja loader */
+.loader {
+    position: relative;
+    width: 250px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #f67609, transparent);
+    overflow: hidden;
+}
+
+.loader::after {
+    content: '';
+    position: absolute;
+    translate: -200px 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #212121, transparent);
+    animation: slide 1s infinite;
+}
+
+@keyframes slide {
+    100% {
+        translate: 300px 0;
+    }
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 23px;
+}
+/* Div de las opciones */
+.opcionesmenu {
+    display: flex;
+    flex-direction: column;
+    background: #0c0c0ce0;
+}
+/* Opciones */
+.iconmenu {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    margin-top: 10px;
+}
+.card1 {
+    position: relative;
+    width: 150px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 250px;
+    background: #000000ab;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card2 {
+    position: relative;
+    width: 150px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 250px;
+    margin: 50px;
+    background: #000000ab;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card1::before,
+.card1::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    background-color: #f67609;
+    transition: all 0.5s;
+}
+
+.card2::before,
+.card2::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    background-color: #f67609;
+    transition: all 0.5s;
+}
+
+.card1::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+.card2::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.card1::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+}
+
+.card2::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+}
+
+.card1:hover::before,
+.card1:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.card2:hover::before,
+.card2:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.card1:hover:after {
+    content: "ENTRAR";
+    font-family: 'Roboto', sans-serif;
+}
+
+.card2:hover:after {
+    content: "ENTRAR";
+    font-family: 'Roboto', sans-serif;
+}
+/* Boton cerrar sesion */
+.botoncerrar {
+    display: flex;
+    justify-content: center;
+    background: #0c0c0ce0;
+    padding: 22px;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #353535e0;
+}
+
+button,
+button span {
+    transition: 200ms;
+}
+
+button .text {
+    transform: translateX(35px);
+    color: white;
+    margin-left: -22px;
+    font-weight: bold;
+}
+
+button .icon {
+    position: absolute;
+    border-left: 1px solid #ffffff;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+button:hover {
+    background: #000000;
+}
+
+button:hover .text {
+    color: transparent;
+}
+
+button:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active .icon img {
+    transform: scale(0.8);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* _________________________________________________________________________ */
+
+/* CSS Mitad2 80% de la pantalla*/
+.mitad2 {
+    float: left;
+    width: 85%;
+    margin-left: 15%;
+    height: 100%;
+}
+/* DIV Principal contenedor todo */
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    
+}
+/* HEADER */
+.header {
+    display: flex;
+    flex-direction: column;
+    background: black;
+    
+}
+.headercont {
+    display: flex;
+    flex-direction: row;
+    background: black;
+    margin: 11px 11px;
+    justify-content: space-between;
+}
+/* Header Logo, Titulo y icono */
+.head1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.imglogo {
+    height: 80px;
+    width: 171px;
+    margin: 0 5px;
+}
+.iconmenu {
+    filter: invert(100%);
+    height: 50px;
+    margin: 0 5px;
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+/* Header opciones */
+.head2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+}
+
+.btnheader {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 5px;
+    border: 3px solid rgb(255 127 0);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btnheader::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255 127 0);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+}
+
+.btnheader:hover {
+    color: black;
+}
+
+.btnheader:hover::before {
+    transform: translateX(0);
+}
+/* Boton Cerar Sesion */
+
+.noselect {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #000000e0;
+    
+}
+
+.noselect,
+.noselect span {
+    transition: 200ms;
+}
+
+.noselect .text {
+    transform: translateX(35px);
+    color: white;
+    margin-left: -22px;
+    font-weight: bold;
+}
+
+.noselect .icon {
+    position: absolute;
+    border-left: 1px solid #ffffff;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.noselect img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+.noselect:hover {
+    background: #ff3636;
+}
+
+.noselect:hover .text {
+    color: transparent;
+}
+
+.noselect:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.noselect:focus {
+    outline: none;
+}
+
+.noselect:active .icon img {
+    transform: scale(0.8);
+}
+/* backbtn */
+.btnback {
+    display: block;
+    position: relative;
+    width: 56px;
+    height: 56px;
+    margin: 0;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+}
+
+.btnback:before,
+.btnback:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    inset: 7px;
+}
+
+.btnback:before {
+    border: 4px solid #F0EEEF;
+    transition: opacity .4s cubic-bezier(.77, 0, .175, 1) 80ms, transform .5s cubic-bezier(.455, .03, .515, .955) 80ms;
+}
+
+.btnback:after {
+    border: 4px solid #f67609;
+    transform: scale(1.3);
+    transition: opacity .4s cubic-bezier(.165, .84, .44, 1), transform .5s cubic-bezier(.25, .46, .45, .94);
+    opacity: 0;
+}
+
+.btnback:hover:before,
+.btnback:focus:before {
+    opacity: 0;
+    transform: scale(0.7);
+    transition: opacity .4s cubic-bezier(.165, .84, .44, 1), transform .5s cubic-bezier(.25, .46, .45, .94);
+}
+
+.btnback:hover:after,
+.btnback:focus:after {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity .4s cubic-bezier(.77, 0, .175, 1) 80ms, transform .5s cubic-bezier(.455, .03, .515, .955) 80ms;
+}
+
+.btnback-box {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btnback-elem {
+    display: flex;
+    width: 20px;
+    height: 20px;
+    margin: 17px 18px 0 18px;
+    transform: rotate(180deg);
+    fill: #F0EEEF;
+}
+
+.btnback:hover .btnback-box,
+.btnback:focus .btnback-box {
+    transition: .4s;
+    transform: translateX(-56px);
+}
+
+.iconbtn {
+    filter: invert(100%);
+}
+/* OPCIONES y Busqueda*/
+.opciones {
+    display: flex;
+    flex-direction: row;
+    background: #0c0c0ce0;
+    justify-content: space-between;
+    
+}
+.opcionescont {
+    display: flex;
+    flex-direction: row;
+    background: black;
+    
+    align-items: center;
+    
+}
+/* Boton opciones */
+.opcionesbtn {
+    padding: 0px 18px;
+    margin: 13px 25px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid #414141;
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 10px;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.opcionesbtn:hover {
+    border-color: #0974f1;
+    box-shadow: 0 0 20px rgba(9, 117, 241, 0.8);
+}
+
+.opcionesbtn:active {
+    box-shadow: 0 0 10px rgba(9, 117, 241, 0.4);
+}
+/*Boton Agregar */
+.addbtn {
+    background-color: #4fffb4;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 14px;
+}
+
+.addbtn span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    font-weight: 600;
+}
+
+.addbtn:hover {
+    background-color: #f67609;
+    cursor: pointer;
+}
+/* Fin Css boton opciones */
+/* Inicio Search Filtrar Cuadro CSS*/
+.searchbox {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    background: black;
+    margin: 11px 10px;
+    
+    
+  }
+  
+
+.searchinput {
+    width: 340px;
+    padding: 10px 0px 10px 40px;
+    border-radius: 9999px;
+    border: solid 1px #333;
+    outline: none;
+    opacity: 0.8;
+}
+
+.imgsearch {
+    position: absolute;
+    top: 25%;
+    left: 10px;
+
+}
+
+/* Fin Search Filtrar */
+
+/* Tabla */
+.tabla {
+    display: flex;
+    flex-direction: column;
+    background: #0c0c0ce0;
+}

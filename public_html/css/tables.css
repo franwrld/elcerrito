@@ -1,0 +1,208 @@
+tr {
+    border: black solid 1px;
+}
+
+tr:hover {
+    background-color: #f67609;
+    
+}
+
+th {
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+.table1 {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+
+.tablacont {
+    background-color: #afafaf;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    margin: 0 auto;
+    border-radius: 3px;
+}
+
+/* Botones Editar y Eliminar */
+.tablebtns {
+    display: flex;
+    flex-direction: row;
+}
+.editarbtn {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #0dffe9, #be9dff, #63d39b);
+    cursor: pointer;
+    padding-top: 3px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+    position: relative;
+    background-size: 300%;
+    background-position: left;
+    transition-duration: 1s;
+}
+
+.msjeditar {
+    position: absolute;
+    top: -40px;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0;
+    background-color: #0dffc4;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+}
+
+.editarbtn:hover .msjeditar {
+    opacity: 1;
+    transition-duration: .5s;
+}
+
+.editarbtn:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+.eliminarbtn {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #ff3b3b, #FF2525, #FFE53B);
+    cursor: pointer;
+    padding-top: 3px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+    position: relative;
+    background-size: 300%;
+    background-position: left;
+    transition-duration: 1s;
+}
+
+.msjeliminar {
+    position: absolute;
+    top: -40px;
+    opacity: 0;
+    background-color: #ff0000;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-duration: .5s;
+    pointer-events: none;
+    letter-spacing: 0.5px;
+}
+
+.eliminarbtn:hover .msjeliminar {
+    opacity: 1;
+    transition-duration: .5s;
+}
+
+.eliminarbtn:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+.entradasbtn {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, rgb(29, 136, 2), rgb(71, 146, 0), #FFE53B);
+    cursor: pointer;
+    padding-top: 3px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+    position: relative;
+    background-size: 300%;
+    background-position: left;
+    transition-duration: 1s;
+   }
+.entradasbtn:hover .msjentrada {
+    opacity: 1;
+    transition-duration: .5s;
+}
+
+.entradasbtn:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+.salidasbtn {
+    width: 35px;
+    height: 35px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: none;
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, rgb(255, 59, 59), rgb(255, 37, 37), #FFE53B);
+    cursor: pointer;
+    padding-top: 3px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.164);
+    position: relative;
+    background-size: 300%;
+    background-position: left;
+    transition-duration: 1s;
+   }
+.salidasbtn:hover .msjsalida {
+    opacity: 1;
+    transition-duration: .5s;
+}
+
+.salidasbtn:hover {
+    background-position: right;
+    transition-duration: 1s;
+}
+/* Paginacion */
+.paginacion {
+    background-color: #0c0c0ce0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ul {
+    display: inline-block;
+    list-style: none;
+}
+li {
+    display: inline-block;
+    list-style: none;
+    color: white;
+    padding: 10px 14px;
+    border: 1px solid #f67609;
+    font-family: 'Roboto', sans-serif;
+}
+a.page-link {
+    color: white;
+}
+
+.thStock:hover {
+    cursor: pointer;
+    background-color: #0dffc4;
+}

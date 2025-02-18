@@ -1,0 +1,303 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nuserH {
+    color: white;
+    font-size: 20px;
+    margin-left: 7px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nuser {
+    color: white;
+    margin-left: 7px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+/* DIV Principal todo */
+.menuventas {
+    display: flex;
+    flex-direction: column;
+
+}
+
+/* Div del titulo text Bienvenidos */
+.tituloventas {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #000000;
+    font-family: 'Roboto', sans-serif;
+}
+/* Barra naranja loader */
+.loader {
+    position: relative;
+    width: 638px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #f67609, transparent);
+    overflow: hidden;
+}
+.loader::after {
+    content: '';
+    position: absolute;
+    translate: -200px 0;
+    width: 150px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #212121, transparent);
+    animation: slide 1s infinite;
+}
+
+@keyframes slide {
+    100% {
+        translate: 300px 0;
+    }
+}
+/* Div de las opciones */
+.opcionesventas {
+    display: flex;
+    flex-direction: row;
+    background: #0c0c0ce0;
+}
+h1 {
+    color: white;
+    font-size: 23px;
+    font-family: 'Roboto', sans-serif;
+}
+/* Opciones */
+.iconmenu {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    margin-top: 10px;
+}
+
+.card1 {
+    position: relative;
+    width: 220px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 320px;
+    background: #000000ab;
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card2 {
+    position: relative;
+    width: 220px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    height: 320px;
+    margin: 50px;
+    background: #000000ab;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card1::before,
+.card1::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    background-color: #f67609;
+    transition: all 0.5s;
+}
+
+.card2::before,
+.card2::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    background-color: #f67609;
+    transition: all 0.5s;
+}
+
+.card1::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.card2::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.card1::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+}
+
+.card2::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+}
+
+.card1:hover::before,
+.card1:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.card2:hover::before,
+.card2:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.card1:hover:after {
+    content: "ENTRAR";
+    font-family: 'Roboto', sans-serif;
+}
+
+.card2:hover:after {
+    content: "ENTRAR";
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Boton cerrar sesion */
+.botoncerrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0c0c0ce0;
+    padding: 22px;
+}
+
+button {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    margin-left: 7px;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #353535e0;
+}
+
+button,
+button span {
+    transition: 200ms;
+}
+
+button .text {
+    transform: translateX(35px);
+    color: white;
+    margin-left: -22px;
+    font-weight: bold;
+}
+
+button .icon {
+    position: absolute;
+    border-left: 1px solid #ffffff;
+    transform: translateX(110px);
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+}
+
+button:hover {
+    background: #ff3636;
+}
+
+button:hover .text {
+    color: transparent;
+}
+
+button:hover .icon {
+    width: 150px;
+    border-left: none;
+    transform: translateX(0);
+}
+
+button:focus {
+    outline: none;
+}
+
+button:active .icon img {
+    transform: scale(0.8);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Boton Volver */
+
+.volverBTN {
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    color: white;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    background: #353535e0;
+}
+
+.volverBTN:hover {
+    background: #ff4800;
+}
+
+.volverBTN .text {
+    transform: translateX(35px);
+    color: white;
+    margin-left: -22px;
+    font-weight: bold;
+}
+
+.iconbtn {
+    filter: invert(100%);
+    margin: 0px 9px;
+}
