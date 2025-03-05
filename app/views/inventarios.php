@@ -53,7 +53,9 @@
                     <!-- Boton Opciones header -->
                     <a class="btnheader" href="<?php echo URL;?>administracion">Administracion</a>
                     <a class="btnheader" href="<?php echo URL;?>ventas">Ventas</a>
+                    <?php if ($_SESSION["tipo_usuario"] == "Administrador") { ?>
                     <a class="btnheader" href="<?php echo URL;?>informes">Reportes</a>
+                    <?php } ?>
                 </div>
                 <div class="head2">
                     <a href="<?php echo URL;?>login/cerrar" tabindex="-1" aria-disabled="true">
