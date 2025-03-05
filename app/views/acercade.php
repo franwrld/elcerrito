@@ -119,6 +119,7 @@
         <div class="aboutText">
             <h1>Versión del Sistema: v.2.0</h1>
         </div>
+        <p style="color: white;">&copy; 2025 El Cerrito</p>
     </div>
     <!-- Scripts -->
     <?php include_once "app/views/sections/scripts.php"; ?>
