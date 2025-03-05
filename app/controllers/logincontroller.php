@@ -22,7 +22,7 @@ class LoginController extends Controller {
             if ($record["tipo_usuario"]=="Administrador") {
                 $info=array("success"=>true,"msg"=>"Usuario correcto","url"=>URL."menuprincipal");
             } else {
-                $info=array("success"=>true,"msg"=>"Usuario correcto","url"=>URL."menuprincipaluser");
+                $info=array("success"=>true,"msg"=>"Usuario correcto","url"=>URL."menuprincipal");
             }
         } else {
             $info=array("success"=>false,"msg"=>"Usuario o contraseña incorrecto");

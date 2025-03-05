@@ -55,6 +55,3 @@
     <?php include_once "app/views/sections/scripts.php"; ?>
 </body>
 </html>
-
-
-

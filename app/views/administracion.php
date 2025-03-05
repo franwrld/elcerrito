@@ -26,24 +26,29 @@
         </div>
         <!-- Opciones del menu -->
         <div class="opcionesmenu">
-            <div class="btn1">
-                <img class="iconmenu" src="<?php echo URL;?>public_html/icons/informes32px.png" alt="logo">
-                <a class="fancy" href="<?php echo URL;?>informes">
-                    <span class="top-key"></span>
-                    <span class="text">REPORTES</span>
-                    <span class="bottom-key-1"></span>
-                    <span class="bottom-key-2"></span>
-                </a>
-            </div>
-            <div class="btn1">
-                <img class="iconmenu" src="<?php echo URL;?>public_html/icons/users32px.png" alt="logo">
-                <a class="fancy" href="<?php echo URL;?>usuarios">
-                    <span class="top-key"></span>
-                    <span class="text">USUARIOS</span>
-                    <span class="bottom-key-1"></span>
-                    <span class="bottom-key-2"></span>
-                </a>
-            </div>
+            <?php if ($_SESSION["tipo_usuario"] == "Administrador") { ?>
+                <div class="btn1">
+                    <img class="iconmenu" src="<?php echo URL;?>public_html/icons/informes32px.png" alt="logo">
+                    <a class="fancy" href="<?php echo URL;?>informes">
+                        <span class="top-key"></span>
+                        <span class="text">REPORTES</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </a>
+                </div>
+                
+                <div class="btn1">
+                    <img class="iconmenu" src="<?php echo URL;?>public_html/icons/users32px.png" alt="logo">
+                    <a class="fancy" href="<?php echo URL;?>usuarios">
+                        <span class="top-key"></span>
+                        <span class="text">USUARIOS</span>
+                        <span class="bottom-key-1"></span>
+                        <span class="bottom-key-2"></span>
+                    </a>
+                </div>
+            <?php } ?>
+
+            <!-- Otras opciones que se muestran para todos los usuarios -->
             <div class="btn1">
                 <img class="iconmenu" src="<?php echo URL;?>public_html/icons/proveedores32px.png" alt="logo">
                 <a class="fancy" href="<?php echo URL;?>proveedores">
@@ -81,6 +86,7 @@
                 </a>
             </div>
         </div>
+
         <!-- Boton Cerrar Sesion -->
         <div class="botoncerrar">
             <a href="<?php echo URL;?>login/cerrar" tabindex="-1" aria-disabled="true">
