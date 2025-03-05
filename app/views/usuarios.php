@@ -145,8 +145,8 @@
                     <div class="selectform">
                     <select name="tipo_usuario" id="tipo_usuario">
                         <option value=""></option>
-                        <option value="admin">admin</option>
-                        <option value="cajero">cajero</option>
+                        <option value="Administrador">Administrador</option>
+                        <option value="Cajero">Cajero</option>
                     </select>
                     </div>
                     

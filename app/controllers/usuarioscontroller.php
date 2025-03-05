@@ -4,7 +4,7 @@ class UsuariosController extends Controller {
     private $usuario;
     public function __construct($parametro) {
         $this->usuario=new Usuarios();
-        parent::__construct("usuarios",$parametro,true);
+        parent::__construct("usuarios",$parametro,true, "Administrador");
     }
 
     public function getAll() {

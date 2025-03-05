@@ -8,7 +8,6 @@ const btnNew = document.querySelector("#btnAgregar");
 const btnGuardar = document.querySelector("#btnGuardar");
 const btnGuardarCambios = document.querySelector("#btnGuardarCambios");
 // Form
-const panelForm = document.querySelector("#contentForm");
 const btnCancelar = document.querySelector("#btnCancelar");
 const formUsuario=document.querySelector("#formUsuario");
 // Tabla
