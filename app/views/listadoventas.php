@@ -1,23 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS fijos -->
-    <?php include_once "app/views/sections/css.php"; ?>
-    <!-- CSS propios -->
-    <!-- CSS del fondo -->
-    <link rel="stylesheet" href="<?php echo URL;?>public_html/css/fondologin.css">
-    <!-- CSS propio -->
-    <link rel="stylesheet" href="<?php echo URL;?>public_html/css/listadoventas.css">
-    <link rel="stylesheet" href="<?php echo URL;?>public_html/css/tables.css">
-    <link rel="stylesheet" href="<?php echo URL;?>public_html/css/formulario.css">
-    <!-- Icono en el navegador -->
-    <link rel="shortcut icon" href="<?php echo URL;?>public_html/images/logo200px.jpeg" type="image/x-icon">
-
-    <title>ListadoVentas</title>
-</head>
+<?php 
+    $title = "Listado Ventas";
+    include_once "app/views/sections/headhtml.php";
+?>
+<!-- CSS -->
+<link rel="stylesheet" href="<?php echo URL;?>public_html/css/listadoventas.css">
 <body>
     <!-- Inicio Divicion Segunda Pantalla donde estan el menu y sus opciones -->
     <!-- Contenido de la segunda mitad de la pantalla -->

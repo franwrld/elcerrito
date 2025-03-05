@@ -1,22 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- CSS fijos -->
-    <?php include_once "app/views/sections/css.php"; ?>
-    <!-- CSS propios -->
-    <!-- CSS del fondo -->
-    <link rel="stylesheet" href="<?php echo URL;?>public_html/css/fondologin.css">
-    <!-- CSS propio -->
-    <link rel="stylesheet" href="<?php echo URL;?>public_html/css/usuarios.css">
-    <link rel="stylesheet" href="<?php echo URL;?>public_html/css/tables.css">
-    <link rel="stylesheet" href="<?php echo URL;?>public_html/css/formulario.css">
-    <!-- Icono en el navegador -->
-    <link rel="shortcut icon" href="<?php echo URL;?>public_html/images/logo200px.jpeg" type="image/x-icon">
-    <title>Usuarios Cerrito</title>
-</head>
+<?php 
+    $title = "Usuarios";
+    include_once "app/views/sections/headhtml.php";
+?>
+<!-- CSS -->
+<link rel="stylesheet" href="<?php echo URL;?>public_html/css/usuarios.css">
+
 <body>
     <!-- Contenedor Principal -->
     <div class="contenedor">
@@ -25,7 +13,9 @@
             <div class="headercont">
                 <div class="head1">
                     <!-- Logo El Cerrito -->
-                    <img class="imglogo" src="<?php echo URL;?>public_html/images/logo200px.jpeg" alt="logo">
+                    <a href="<?php echo URL;?>menuprincipal">
+                        <img class="imglogo" src="<?php echo URL;?>public_html/images/logo200px.jpeg" alt="logo">
+                    </a>
                     <!-- Icono -->
                     <img class="iconmenu" src="<?php echo URL;?>public_html/icons/users32px.png" alt="logo">
                     <!-- Titulo -->
