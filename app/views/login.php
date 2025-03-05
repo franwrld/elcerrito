@@ -10,7 +10,7 @@
             <div id="formlogin-body">
                 <div id="welcome-lines">
                     <img src="<?php echo URL;?>public_html/images/logo200px.jpeg" alt="logo">
-                    <div id="welcome-line-2">Iniciar Sesión</div>
+                    <div id="welcome-line-2">Ingresar Credenciales</div>
                 </div>
                 <div id="input-area">
                     <div class="formlogin-inp">
