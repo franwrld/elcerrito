@@ -97,11 +97,11 @@
                         <td>1234-7845</td>
         
                         <td>
-                            <button class="editarbtn" type="button" onclick="editarProveedor(${item.id_proveedor})">
+                            <button class="editarbtn" type="button" onclick="editarProveedor()">
                                 <img src="<?php echo URL;?>public_html/icons/edit.png" alt="x"/>
                                 <span class="msjeditar">Editar</span>
                             </button>
-                            <button class="eliminarbtn" type="button" onclick="eliminarProveedor(${item.id_proveedor})">
+                            <button class="eliminarbtn" type="button" onclick="eliminarProveedor()">
                                 <img src="<?php echo URL;?>public_html/icons/trash.png" alt="x"/>
                                 <span class="msjeliminar">Eliminar</span>
                             </button>
