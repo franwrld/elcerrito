@@ -6,7 +6,7 @@ class ReporteVentasController extends Controller {
     private $listado;
     public function __construct($parametro) {
         $this->listado= new ListadoVentas();
-        parent::__construct("reporteventas",$parametro,true);
+        parent::__construct("reporteventas",$parametro,true,"Administrador");
     }
     public function getReporte() {
         $data = $_GET;

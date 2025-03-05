@@ -5,7 +5,7 @@ class ReporteInventariosController extends Controller {
     private $inventario;
     public function __construct($parametro) {
         $this->inventario= new Inventarios();
-        parent::__construct("reporteinventarios",$parametro,true);
+        parent::__construct("reporteinventarios",$parametro,true,"Administrador");
     }
     public function getReporte(){
        

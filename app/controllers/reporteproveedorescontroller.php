@@ -6,7 +6,7 @@ class ReporteProveedoresController extends Controller {
     private $proveedor;
     public function __construct($parametro) {
         $this->proveedor= new Proveedores();
-        parent::__construct("reporteproveedores",$parametro,true);
+        parent::__construct("reporteproveedores",$parametro,true,"Administrador");
     }
     public function getReporte(){
        
