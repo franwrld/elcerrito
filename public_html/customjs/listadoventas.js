@@ -35,9 +35,15 @@ function cargarDatos() {
                 objDatos.records=data.records;
                 objDatos.currentPage=1;
                 
-                document.getElementById("ventashoy").innerHTML = "$ " + data.total;
-                document.getElementById("ventassemana").innerHTML = "$ " + data.totals;
-                document.getElementById("ventasmes").innerHTML = "$ " + data.totalm;
+                if (document.getElementById("ventashoy")) {
+                    document.getElementById("ventashoy").innerHTML = "$ " + data.total;
+                }
+                if (document.getElementById("ventassemana")) {
+                    document.getElementById("ventassemana").innerHTML = "$ " + data.totals;
+                }
+                if (document.getElementById("ventasmes")) {
+                    document.getElementById("ventasmes").innerHTML = "$ " + data.totalm;
+                }
                 crearTabla();
             } else {
                 console.log("Error al recuperar los registros");

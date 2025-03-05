@@ -73,12 +73,14 @@
                 <h1>Ventas de El Cerrito Bar & Grill </h1>
                 <div class="loader"></div>
             </div>
-            <div class="opcionesventas">
-                <div class="card1">Ventas hoy<h4 id="ventashoy">$0</h4></div>
-                <div class="card2">Ventas de la semana <h4 id="ventassemana">$0</h4>  </div>
-                <div class="card2">Ventas del mes<h4 id="ventasmes">$0</h4>  </div>
-            </div>
-           
+            <?php
+            if ($_SESSION["tipo_usuario"]=="Administrador") {
+                include_once "app/views/sections/ventasingresos.php";
+            } else {
+                include_once "app/views/sections/empty.php";
+            } 
+            ?>
+        </div>
         <div class="tabla" id="tableConte">
             <div class="tablacont" id="contentTable">
                 <table class="table1" id="TableListVentas">

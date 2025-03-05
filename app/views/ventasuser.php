@@ -25,7 +25,7 @@
             <a href="<?php echo URL;?>nuevacuentasuser" target="_blank">
                 <div class="card1">NUEVA CUENTA <img class="iconmenu" src="<?php echo URL;?>public_html/icons/box128px.png" alt="logo"></div>
             </a>
-            <a href="<?php echo URL;?>listadoventasuser">
+            <a href="<?php echo URL;?>listadoventas">
                 <div class="card2">VENTAS <img class="iconmenu" src="<?php echo URL;?>public_html/icons/box128px.png" alt="logo"></div>
             </a>
         </div>
