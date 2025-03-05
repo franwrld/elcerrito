@@ -101,11 +101,11 @@
                         <td>Admin</td>
                         <td>Activo</td>
                         <td>
-                            <button class="editarbtn" type="button" onclick="editarUsuario(${item.id_usuario})">
+                            <button class="editarbtn" type="button" onclick="editarUsuario()">
                                 <img src="<?php echo URL;?>public_html/icons/edit.png" alt="x"/>
                                 <span class="msjeditar">Editar</span>
                             </button>
-                            <button class="eliminarbtn" type="button" onclick="eliminarUsuario(${item.id_usuario})">
+                            <button class="eliminarbtn" type="button" onclick="eliminarUsuario()">
                                 <img src="<?php echo URL;?>public_html/icons/trash.png" alt="x"/>
                                 <span class="msjeliminar">Eliminar</span>
                             </button>
