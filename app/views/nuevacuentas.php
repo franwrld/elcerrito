@@ -49,7 +49,9 @@
                     <!-- Boton Opciones header -->
                     <a class="btnheader" href="<?php echo URL;?>inventarios">Inventario</a>
                     <a class="btnheader" href="<?php echo URL;?>listadoventas">Listado Ventas</a>
+                    <?php if ($_SESSION["tipo_usuario"] == "Administrador") { ?>
                     <a class="btnheader" href="<?php echo URL;?>informes">Reportes</a>
+                    <?php } ?>
                     <a href="<?php echo URL;?>login/cerrar" tabindex="-1" aria-disabled="true">
                         <button class="noselect">
                             <span class="text">Cerrar Sesión</span>

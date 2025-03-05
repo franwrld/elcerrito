@@ -22,7 +22,7 @@
             <div class="loader"></div>
         </div>
         <div class="opcionesventas">
-            <a href="<?php echo URL;?>nuevacuentas" target="_blank">
+            <a href="<?php echo URL;?>nuevacuentas">
                 <div class="card1">NUEVA CUENTA <img class="iconmenu" src="<?php echo URL;?>public_html/icons/box128px.png" alt="logo"></div>
             </a>
             <a href="<?php echo URL;?>listadoventas">
