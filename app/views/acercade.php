@@ -117,7 +117,7 @@
         </div>
 
         <div class="aboutText">
-            <h1>Versión del Sistema: v.1.0</h1>
+            <h1>Versión del Sistema: v.2.0</h1>
         </div>
     </div>
     <!-- Scripts -->
