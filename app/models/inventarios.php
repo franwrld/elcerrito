@@ -19,6 +19,14 @@ class Inventarios extends BaseDeDatos {
         return $this->executeQuery("select id_producto,nombre_producto,precio_unitario,categoria,cantidad_stock,nombre_proveedor 
         from productos inner join proveedores USING(id_proveedor) where categoria='bebidas' order by cantidad_stock ASC");
     }
+    public function getAllBebidasAsc() {
+        return $this->executeQuery("select id_producto,nombre_producto,precio_unitario,categoria,cantidad_stock,nombre_proveedor 
+        from productos inner join proveedores USING(id_proveedor) where categoria='bebidas' order by cantidad_stock ASC");
+    }
+    public function getAllBebidasDesc() {
+        return $this->executeQuery("select id_producto,nombre_producto,precio_unitario,categoria,cantidad_stock,nombre_proveedor 
+        from productos inner join proveedores USING(id_proveedor) where categoria='bebidas' order by cantidad_stock DESC");
+    }
     public function getAllAves() {
         return $this->executeQuery("select id_producto,nombre_producto,precio_unitario,categoria,cantidad_stock,nombre_proveedor 
         from productos inner join proveedores USING(id_proveedor) where categoria='aves'");

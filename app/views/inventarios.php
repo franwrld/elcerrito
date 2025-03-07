@@ -62,13 +62,9 @@
                 <!-- Boton Ver Bebidas -->
                 <button class="opcionesbtn" type="button" onclick="cambiarApi('inventarios/getAllBebidas')"><span class="opcionestxt">Bebidas</span></button>
                 <!-- Boton Ver Carnes -->
-                <button class="opcionesbtn" type="button" onclick="cambiarApi('inventarios/getAllCarnes')"><span class="opcionestxt">Carnes</span></button>
+                <button class="opcionesbtn" type="button" onclick="cambiarApi('inventarios/getAllBebidasDesc')"><span class="opcionestxt">Mayor a Menor</span></button>
                 <!-- Boton Ver Aves -->
-                <button class="opcionesbtn" type="button" onclick="cambiarApi('inventarios/getAllAves')"><span class="opcionestxt">Aves</span></button>
-                <!-- Boton Ver Mariscos -->
-                <button class="opcionesbtn" type="button" onclick="cambiarApi('inventarios/getAllMariscos')"><span class="opcionestxt">Mariscos</span></button>
-                <!-- Boton Ver Todos -->
-                <button class="opcionesbtn" type="button" onclick="cambiarApi('inventarios/getAll')"><span class="opcionestxt">Todos</span></button>
+                <button class="opcionesbtn" type="button" onclick="cambiarApi('inventarios/getAllBebidasAsc')"><span class="opcionestxt">Menor a Mayor</span></button>
                 <!-- Boton Agregar -->
                 <button class="addbtn" type="button" id="btnAgregar">
                     <span>

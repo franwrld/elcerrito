@@ -25,6 +25,15 @@ class InventariosController extends Controller {
         $records=$this->inventario->getAllBebidas();
         $info=array('success'=>true,'records'=>$records);
         echo json_encode($info);
+    }public function getAllBebidasDesc() {
+        $records=$this->inventario->getAllBebidasDesc();
+        $info=array('success'=>true,'records'=>$records);
+        echo json_encode($info);
+    }
+    public function getAllBebidasAsc() {
+        $records=$this->inventario->getAllBebidasAsc();
+        $info=array('success'=>true,'records'=>$records);
+        echo json_encode($info);
     }
     public function getAllAves() {
         $records=$this->inventario->getAllAves();
